@@ -179,3 +179,55 @@ mission1-evidence/
 
 **Author**: [@mijoekim](https://github.com/mijoekim)
 **Mission**: Codyssey Mission 1
+
+
+---
+
+## 8. 네트워크 & 포트 심화
+
+### 네트워크 네임스페이스와 포트 포워딩
+
+Docker 컨테이너는 독립된 네트워크 네임스페이스를 가진다.
+-p 8080:80 옵션은 호스트 8080 포트를 컨테이너 80 포트로 포워딩한다.
+
+호스트:8080 → (NAT/iptables) → 컨테이너 네임스페이스:80
+
+### 포트 충돌 진단 및 해제 절차
+
+    sudo lsof -i :8080
+    kill -9 <PID>
+    docker stop $(docker ps -q --filter publish=8080)
+    docker run -d --name my-web -p 8080:80 my-nginx:v2
+
+---
+
+## 9. 경로 설계 원칙
+
+| 구분 | 경로 예시 | 선택 기준 |
+|------|-----------|-----------|
+| 호스트 소스 | ./index.html | 상대 경로 → 이식성 확보 |
+| 컨테이너 대상 | /usr/share/nginx/html/ | nginx 공식 웹루트 절대 경로 |
+
+---
+
+## 10. 볼륨 & 데이터 지속성
+
+### 볼륨 마운트 재현 절차
+
+    docker volume create my-vol
+    docker run -d --name my-web-vol -v my-vol:/usr/share/nginx/html -p 8081:80 my-nginx:v2
+    docker stop my-web-vol && docker rm my-web-vol
+    docker volume ls
+
+### 볼륨 백업 절차
+
+    docker run --rm -v my-vol:/data -v $(pwd):/backup alpine tar czf /backup/vol-backup.tar.gz /data
+    ls -lh vol-backup-*.tar.gz
+
+### 데이터 손실 방지 원칙
+
+| 방법 | 특징 | 사용 시점 |
+|------|------|-----------|
+| Named Volume | Docker 관리, 이식성 높음 | DB, 영구 데이터 |
+| Bind Mount | 호스트 경로 직접 연결 | 개발 중 실시간 반영 |
+| 백업 스크립트 | tar로 압축 보관 | 배포 전 스냅샷 |
