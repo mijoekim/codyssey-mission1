@@ -1,0 +1,27 @@
+===== 1. pwd (현재 위치) =====
+/home/user/mission1-evidence
+
+===== 2. mkdir (폴더 생성) =====
+total 8
+-rw-r--r-- 1 user user  102 Nov  3 16:06 terminal-practice.log
+drwxr-xr-x 2 user user 4096 Nov  3 16:06 test_folder
+
+===== 3. cp (파일 복사) =====
+total 16
+-rw-r--r-- 1 user user  261 Nov  3 16:06 terminal-practice.log
+-rw-r--r-- 1 user user    6 Nov  3 16:06 test.txt
+-rw-r--r-- 1 user user    6 Nov  3 16:06 test_copy.txt
+drwxr-xr-x 2 user user 4096 Nov  3 16:06 test_folder
+
+===== 4. mv (파일 이동/이름변경) =====
+total 16
+-rw-r--r-- 1 user user    6 Nov  3 16:06 renamed.txt
+-rw-r--r-- 1 user user  539 Nov  3 16:06 terminal-practice.log
+-rw-r--r-- 1 user user    6 Nov  3 16:06 test.txt
+drwxr-xr-x 2 user user 4096 Nov  3 16:06 test_folder
+
+===== 5. rm (파일 삭제) =====
+total 12
+-rw-r--r-- 1 user user  802 Nov  3 16:06 terminal-practice.log
+-rw-r--r-- 1 user user    6 Nov  3 16:06 test.txt
+drwxr-xr-x 2 user user 4096 Nov  3 16:06 test_folder
