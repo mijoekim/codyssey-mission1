@@ -1,0 +1,36 @@
+=== volume-practice.log ===
+실행 시각: Tue Nov  3 18:25:23 KST 2026
+
+--- 볼륨 생성 ---
+my-vol
+DRIVER    VOLUME NAME
+local     my-vol
+
+--- 볼륨 마운트 컨테이너 실행 ---
+4139061686c1be3b023bda552937936f275f1f8427e4e128d6395833b1f7923a
+
+--- 컨테이너 내부 파일 확인 ---
+total 16
+drwxr-xr-x    2 root     root          4096 Nov  3 09:25 .
+drwxr-xr-x    1 root     root          4096 Oct 21 22:47 ..
+-rw-r--r--    1 root     root           497 Oct 21 17:54 50x.html
+-rw-r--r--    1 root     root           251 Nov  3 07:23 index.html
+
+--- 컨테이너 삭제 후 볼륨 데이터 유지 확인 ---
+vol-test
+vol-test
+DRIVER    VOLUME NAME
+local     my-vol
+볼륨 my-vol 은 컨테이너 삭제 후에도 유지됨
+
+--- 바인드 마운트 예시 ---
+709cf15c8800424cda1a8d27b52a9521d44d9bfb391595c93d0b7edb78aa570c
+<h1>Bind Mount Test</h1>
+
+bind-test
+bind-test
+
+--- 볼륨 정리 ---
+my-vol
+
+=== 완료 ===

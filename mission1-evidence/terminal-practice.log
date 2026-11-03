@@ -1,27 +1,55 @@
-===== 1. pwd (현재 위치) =====
-/home/user/mission1-evidence
+=== terminal-practice.log ===
+실행 시각: Tue Nov  3 18:24:40 KST 2026
 
-===== 2. mkdir (폴더 생성) =====
+--- pwd ---
+/home/user/codyssey/mission1
+
+--- ls -la ---
+total 56
+drwxr-xr-x 5 user user 4096 Nov  3 17:25 .
+drwxr-xr-x 3 user user 4096 Nov  2 19:33 ..
+drwxr-xr-x 7 user user 4096 Nov  3 17:26 .git
+-rw-r--r-- 1 user user 6571 Nov  3 17:25 README.md
+-rw-r--r-- 1 user user 1305 Nov  3 17:24 check-env.ps1
+-rw-r--r-- 1 user user  422 Nov  3 17:24 chmod-practice.log
+-rw-r--r-- 1 user user 2878 Nov  3 17:24 docker-practice.log
+-rw-r--r-- 1 user user 1037 Nov  3 17:24 env-check-result.txt
+-rw-r--r-- 1 user user  770 Nov  3 17:24 git-practice.log
+drwxr-xr-x 4 user user 4096 Nov  3 16:49 mission1-evidence
+drwxr-xr-x 2 user user 4096 Nov  2 19:39 sample_dir
+-rw-r--r-- 1 user user  977 Nov  3 17:24 terminal-practice.log
+-rw-r--r-- 1 user user   15 Nov  2 19:45 test.txt
+
+--- mkdir 실습 ---
+total 0
+drwxr-xr-x 3 user user  60 Nov  3 18:24 .
+drwxrwxrwt 9 root root 220 Nov  3 18:24 ..
+drwxr-xr-x 2 user user  40 Nov  3 18:24 subdir
+
+--- touch / cat 실습 ---
+Hello, Codyssey!
+
+--- cp 실습 ---
 total 8
--rw-r--r-- 1 user user  102 Nov  3 16:06 terminal-practice.log
-drwxr-xr-x 2 user user 4096 Nov  3 16:06 test_folder
+drwxr-xr-x 3 user user 100 Nov  3 18:24 .
+drwxrwxrwt 9 root root 220 Nov  3 18:24 ..
+-rw-r--r-- 1 user user  17 Nov  3 18:24 hello-copy.txt
+-rw-r--r-- 1 user user  17 Nov  3 18:24 hello.txt
+drwxr-xr-x 2 user user  40 Nov  3 18:24 subdir
 
-===== 3. cp (파일 복사) =====
-total 16
--rw-r--r-- 1 user user  261 Nov  3 16:06 terminal-practice.log
--rw-r--r-- 1 user user    6 Nov  3 16:06 test.txt
--rw-r--r-- 1 user user    6 Nov  3 16:06 test_copy.txt
-drwxr-xr-x 2 user user 4096 Nov  3 16:06 test_folder
+--- mv 실습 ---
+total 8
+drwxr-xr-x 3 user user 100 Nov  3 18:24 .
+drwxrwxrwt 9 root root 220 Nov  3 18:24 ..
+-rw-r--r-- 1 user user  17 Nov  3 18:24 hello-moved.txt
+-rw-r--r-- 1 user user  17 Nov  3 18:24 hello.txt
+drwxr-xr-x 2 user user  40 Nov  3 18:24 subdir
 
-===== 4. mv (파일 이동/이름변경) =====
-total 16
--rw-r--r-- 1 user user    6 Nov  3 16:06 renamed.txt
--rw-r--r-- 1 user user  539 Nov  3 16:06 terminal-practice.log
--rw-r--r-- 1 user user    6 Nov  3 16:06 test.txt
-drwxr-xr-x 2 user user 4096 Nov  3 16:06 test_folder
+--- rm 실습 ---
+total 4
+drwxr-xr-x 3 user user  80 Nov  3 18:24 .
+drwxrwxrwt 9 root root 220 Nov  3 18:24 ..
+-rw-r--r-- 1 user user  17 Nov  3 18:24 hello.txt
+drwxr-xr-x 2 user user  40 Nov  3 18:24 subdir
 
-===== 5. rm (파일 삭제) =====
-total 12
--rw-r--r-- 1 user user  802 Nov  3 16:06 terminal-practice.log
--rw-r--r-- 1 user user    6 Nov  3 16:06 test.txt
-drwxr-xr-x 2 user user 4096 Nov  3 16:06 test_folder
+=== 완료 ===

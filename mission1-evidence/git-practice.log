@@ -1,0 +1,45 @@
+=== git-practice.log ===
+실행 시각: Tue Nov  3 18:25:37 KST 2026
+
+--- git config ---
+user.name=mijoek
+user.email=mijoekkim@gmail.com
+core.repositoryformatversion=0
+core.filemode=true
+core.bare=false
+core.logallrefupdates=true
+
+--- git remote -v ---
+origin	https://github.com/mijoekim/codyssey-mission1.git (fetch)
+origin	https://github.com/mijoekim/codyssey-mission1.git (push)
+
+--- git log (최근 5개) ---
+5934170 merge: 원격 저장소와 병합, 로컬 완성본 README 유지
+d7e3783 docs: Mission1 완료 - README 및 증거 파일 전체 추가
+60cad21 docs: add evidence logs (terminal, chmod, docker, git)
+c14d867 Merge branch 'main' of https://github.com/mijoekim/codyssey-mission1
+0ecf166 docs: README 및 환경 점검 결과 추가
+
+--- git status ---
+On branch main
+Your branch is up to date with 'origin/main'.
+
+Changes not staged for commit:
+  (use "git add <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+	modified:   mission1-evidence/chmod-practice.log
+	modified:   mission1-evidence/docker-practice.log
+	modified:   mission1-evidence/terminal-practice.log
+
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+	mission1-evidence/git-practice.log
+	mission1-evidence/volume-practice.log
+
+no changes added to commit (use "git add" and/or "git commit -a")
+
+--- git branch ---
+* main
+  remotes/origin/main
+
+=== 완료 ===

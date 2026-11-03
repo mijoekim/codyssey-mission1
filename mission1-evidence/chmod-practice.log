@@ -1,16 +1,17 @@
-===== 파일 권한(chmod) 실습 =====
+=== chmod-practice.log ===
+실행 시각: Tue Nov  3 18:24:50 KST 2026
 
---- 초기 상태 ---
--rw-r--r-- 1 user user 5 Nov  3 16:06 perm.txt
 
---- chmod 644 (rw-r--r--) ---
--rw-r--r-- 1 user user 5 Nov  3 16:06 perm.txt
+--- 644 설정 ---
+-rw-r--r-- 1 user user 0 Nov  3 18:24 /tmp/chmod-test.txt
 
---- chmod 755 (rwxr-xr-x) ---
--rwxr-xr-x 1 user user 5 Nov  3 16:06 perm.txt
+--- 755 설정 ---
+-rwxr-xr-x 1 user user 0 Nov  3 18:24 /tmp/chmod-test.txt
 
---- chmod 700 (rwx------) ---
--rwx------ 1 user user 5 Nov  3 16:06 perm.txt
+--- 700 설정 ---
+-rwx------ 1 user user 0 Nov  3 18:24 /tmp/chmod-test.txt
 
---- chmod 600 (rw-------) ---
--rw------- 1 user user 5 Nov  3 16:06 perm.txt
+--- 600 설정 ---
+-rw------- 1 user user 0 Nov  3 18:24 /tmp/chmod-test.txt
+
+=== 완료 ===
